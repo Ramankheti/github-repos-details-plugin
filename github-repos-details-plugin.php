@@ -117,7 +117,7 @@ function display_github_release_date($atts) {
     $github_release_data = json_decode(wp_remote_retrieve_body($github_release_data));
 
     if (!empty($github_release_data) && is_array($github_release_data)) {
-        // Get the latest release date
+        
         $latest_release_date = date('F j, Y', strtotime($github_release_data[0]->published_at));
 
         return "<p> $latest_release_date</p>";
