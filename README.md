@@ -10,10 +10,10 @@ Now, you can activate your plugin from the WordPress admin dashboard.
 
 To use the shortcodes, you can insert them into your posts or pages like this:
 # shortcodes
- [github_stars repository="your-repo-name" username="your-github-username"]
+  [github_stars repository="your-repo-name" username="your-github-username"]
  
- [github_forks repository="your-repo-name" username="your-github-username"]
+  [github_forks repository="your-repo-name" username="your-github-username"]
  
- [github_release_date repository="your-repo-name" username="your-github-username"]
+  [github_release_date repository="your-repo-name" username="your-github-username"]
  
 Make sure to replace "your-repo-name" and "your-github-username" with the actual GitHub repository and username you want to display details for.
