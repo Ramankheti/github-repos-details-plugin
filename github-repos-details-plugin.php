@@ -62,7 +62,6 @@ function display_github_forks($atts) {
         return 'Please provide the GitHub repository and username in the shortcode.';
     }
 
-    // Merge the common headers with the specific shortcode headers
     $forks_headers = $headers;
 
     $github_data = wp_remote_get("https://api.github.com/repos/$username/$repository");
@@ -74,7 +73,7 @@ function display_github_forks($atts) {
     $github_data = json_decode(wp_remote_retrieve_body($github_data));
 
     if (!empty($github_data) && is_object($github_data)) {
-        // Get the number of forks
+
         $forks = $github_data->forks_count;
 
         return "
@@ -108,7 +107,6 @@ function display_github_release_date($atts) {
         return 'Please provide the GitHub repository and username in the shortcode.';
     }
 
-    // Merge the common headers with the specific shortcode headers
     $release_headers = $headers;
 
     $github_release_data = wp_remote_get("https://api.github.com/repos/$username/$repository/releases");
